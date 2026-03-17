@@ -24,6 +24,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [AppComponent, Exercicio2Component, Exercico1Component],
@@ -47,6 +48,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSortModule,
     MatTableModule,
     FlexLayoutModule,
+    MatCheckboxModule,
+    
 
     // Vex
     VexModule,

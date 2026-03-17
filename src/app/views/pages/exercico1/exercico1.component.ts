@@ -14,7 +14,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./exercico1.component.scss']
 })
 export class Exercico1Component implements OnInit, AfterViewInit {
-  displayedColumns: string[] = ['id', 'descricao', 'concluida'];
+  displayedColumns: string[] = ['id', 'descricao', 'status'];
   dataSource!: MatTableDataSource<tarefas>;
   tarefas: tarefas[] = []; // alterar para receber do backend - Tarefas:
 
@@ -38,11 +38,11 @@ export class Exercico1Component implements OnInit, AfterViewInit {
     this.tarefas = [
       {
         id: 1, descricao: 'Revisar conceitos de componentização',
-        concluida: true
+        status: "true"
       },
       {
-        id: 2, descricao: 'Praticar a exibição de listas', concluida:
-          false
+        id: 2, descricao: 'Praticar a exibição de listas', status:
+          "false"
       },
     ];
     this.dataSource = new MatTableDataSource(this.tarefas);
@@ -68,4 +68,11 @@ export class Exercico1Component implements OnInit, AfterViewInit {
 
   this.form.reset();
 }
+
+
+alterarStatus(index: number, checked: boolean) {
+  this.dataSource.data[index].status = checked ? 'true' : 'false';
+  this.dataSource.data = [...this.dataSource.data];
+}
+
 }

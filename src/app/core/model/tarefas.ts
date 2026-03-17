@@ -1,7 +1,7 @@
 
 
 export class tarefas {
-    id!: number;
+    id?: number;
     descricao!: String;
-    concluida?: boolean;
+    status?: String;
 }
