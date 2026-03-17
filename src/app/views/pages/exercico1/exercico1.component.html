@@ -1,11 +1,11 @@
 <form [formGroup]='form'>
-    <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px" class="linha-formulario">
-        <div class="col-md-6" fxFlex="80" style="margin-left: 16px;">
+    <div fxLayout="row" fxLayoutAlign="center center" class="linha-formulario">
+        <div class="input-container" fxFlex="50"  fxLayout="row" style="margin-left: 16px;" fxLayoutGab="8px" fxLayoutAlign="start center" fxLayoutGap="8px">
             <mat-form-field appearance="standard">
                 <mat-label class="button"  >Descrição da tarefa</mat-label>
                 <input matInput formControlName="descricao"/>
             </mat-form-field>
-            <button mat-button mat-raised-button color="primary" (click)="adcionarTarefa()">Adicionar</button>
+            <button mat-button mat-raised-button color="primary" (click)="adcionarTarefa()" [disabled]="form.get('descricao')?.invalid || !form.get('descricao')?.value">Adicionar</button>
         </div>
         <div class="col">
         </div>

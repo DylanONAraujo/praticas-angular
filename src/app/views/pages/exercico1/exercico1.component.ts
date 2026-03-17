@@ -38,7 +38,7 @@ export class Exercico1Component implements OnInit, AfterViewInit {
     this.tarefas = [
       {
         id: 1, descricao: 'Revisar conceitos de componentização',
-        status: "true"
+        status: "false"
       },
       {
         id: 2, descricao: 'Praticar a exibição de listas', status:
