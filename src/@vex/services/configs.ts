@@ -9,9 +9,9 @@ const defaultConfig: Config = {
   layout: 'horizontal',
   boxed: false,
   sidenav: {
-    title: 'VEX',
-    imageUrl: 'assets/img/demo/logo.svg',
-    showCollapsePin: true,
+    title: 'Praticas Angular',
+    imageUrl: ' ',
+    showCollapsePin: false,
     state: 'expanded'
   },
   toolbar: {
@@ -21,7 +21,7 @@ const defaultConfig: Config = {
     position: 'below-toolbar'
   },
   footer: {
-    visible: true,
+    visible: false,
     fixed: true
   }
 };

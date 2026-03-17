@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CustomLayoutComponent } from './custom-layout/custom-layout.component';
+import { Exercico1Component } from './views/pages/exercico1/exercico1.component';
+
 
 const routes: Routes = [
   {
     path: '',
     component: CustomLayoutComponent,
-    children: []
+    children: [
+       { path: 'exercico1', component: Exercico1Component},
+    ]
   }
 ];
 
