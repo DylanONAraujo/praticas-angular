@@ -7,10 +7,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TarefaApiService {
 
-  private apiUrl = 'http://localhost:3001/listadetarefas';
+  private apiUrl = 'http://localhost:3002/listadetarefas';
 
   constructor(private http: HttpClient) {}
-  
+
     getTarefas(): Observable < any > {
       return this.http.get(this.apiUrl);
     }
