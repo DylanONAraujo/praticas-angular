@@ -41,17 +41,6 @@ export class Exercicio2Component implements OnInit {
     });
   }
 
-  adcionarTarefa() {
-    const descricao = this.form.get('descricao')?.value;
-    const add = {
-      id: this.tarefas.length + 1,
-      descricao: descricao,
-      concluida: false
-    };
-    this.dataSource.data = [...this.tarefas, add];
-    this.tarefas = this.dataSource.data;
-    this.form.reset();
-  }
 
   alterarStatus(index: number, checked: boolean) {
     this.dataSource.data[index].status = checked ? 'true' : 'false';
