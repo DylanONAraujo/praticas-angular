@@ -89,6 +89,12 @@ export class AppComponent {
         label: 'Exercicio 2',
         route: '/exercicio2',
         icon: icLayers
+      },
+      {
+        type: 'link',
+        label: 'Exercicio 3',
+        route: '/exercicio3',
+        icon: icLayers
       }
     ];
   }

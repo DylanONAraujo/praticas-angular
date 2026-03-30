@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CustomLayoutComponent } from './custom-layout/custom-layout.component';
 import { Exercico1Component } from './views/pages/exercico1/exercico1.component';
 import { Exercicio2Component } from './views/pages/exercicio2/exercicio2.component';
+import { Exercicio3Component } from './views/pages/exercicio3/exercicio3.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
     children: [
        { path: 'exercico1', component: Exercico1Component},
        { path: 'exercicio2', component: Exercicio2Component},
+       { path: 'exercicio3', component: Exercicio3Component},
     ]
   }
 ];

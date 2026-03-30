@@ -25,9 +25,10 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { Exercicio3Component } from './views/pages/exercicio3/exercicio3.component';
 
 @NgModule({
-  declarations: [AppComponent, Exercicio2Component, Exercico1Component],
+  declarations: [AppComponent, Exercicio2Component, Exercico1Component, Exercicio3Component],
   imports: [
     BrowserModule,
     AppRoutingModule,
