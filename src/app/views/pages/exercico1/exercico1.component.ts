@@ -31,11 +31,11 @@ export class Exercico1Component implements OnInit {
     this.tarefas = [
       {
         id: 1, descricao: 'Revisar conceitos de componentização',
-        status: "false"
+        status: false
       },
       {
         id: 2, descricao: 'Praticar a exibição de listas', status:
-          "false"
+          false
       },
     ];
   }
@@ -46,7 +46,7 @@ export class Exercico1Component implements OnInit {
   const add = {
     id: this.tarefas.length + 1,
     descricao: descricao,
-    status: "false"
+    status: false
   };
 
   this.tarefas = [...this.tarefas, add];

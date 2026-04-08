@@ -38,7 +38,7 @@ export class TableComponent implements OnInit {
 
 
 alterarStatus(index: number, checked: boolean) {
-  this.dataSource.data[index].status = checked ? 'true' : 'false';
+  this.dataSource.data[index].status = checked ? true : false;
   this.dataSource.data = [...this.dataSource.data];
 }
 

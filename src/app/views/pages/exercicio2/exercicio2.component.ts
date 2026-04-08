@@ -21,7 +21,6 @@ export class Exercicio2Component implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
 
   form!: FormGroup;
-  novaTarefa: String = '';
 
   constructor(private fb: FormBuilder, private dialog: MatDialog, private tarefasApi: TarefaApiService) { }
 
@@ -43,7 +42,7 @@ export class Exercicio2Component implements OnInit {
 
 
   alterarStatus(index: number, checked: boolean) {
-    this.dataSource.data[index].status = checked ? 'true' : 'false';
+    this.dataSource.data[index].status = checked ? true : false;
     this.dataSource.data = [...this.dataSource.data];
   }
 

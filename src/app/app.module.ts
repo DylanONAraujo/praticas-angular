@@ -29,7 +29,6 @@ import { Exercicio3Component } from './views/pages/exercicio3/exercicio3.compone
 import { ComponentizacaoComponent } from './views/pages/componentizacao/componentizacao.component';
 import { TableComponent } from './core/lib/components/table/table.component';
 import { CommonModule } from '@angular/common';
-import { LibModule } from './core/lib/lib.module';
 
 
 @NgModule({
@@ -56,7 +55,6 @@ import { LibModule } from './core/lib/lib.module';
     FlexLayoutModule,
     MatCheckboxModule,
     CommonModule,
-    LibModule,
 
 
     // Vex

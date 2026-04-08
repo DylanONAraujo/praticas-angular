@@ -17,7 +17,7 @@
           <mat-checkbox
             [checked]="element.status === 'true'"
             (change)="alterarStatus(i, $event.checked)">
-            {{ element.status === 'true' ? 'Concluída' : 'Pendente' }}
+            {{ element.status === true ? 'Concluída' : 'Pendente' }}
           </mat-checkbox>
         </td>
       </ng-container>
