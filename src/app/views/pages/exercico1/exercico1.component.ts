@@ -1,10 +1,7 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
+import { Component, NgModule, OnInit, } from '@angular/core';
 import { tarefas } from '../../../core/model/tarefas';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatDialog } from '@angular/material/dialog';
+
 
 
 
@@ -13,21 +10,17 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './exercico1.component.html',
   styleUrls: ['./exercico1.component.scss']
 })
-export class Exercico1Component implements OnInit, AfterViewInit {
+
+export class Exercico1Component implements OnInit {
   displayedColumns: string[] = ['id', 'descricao', 'status'];
-  dataSource!: MatTableDataSource<tarefas>;
   tarefas: tarefas[] = []; // alterar para receber do backend - Tarefas:
+  // color: string = 'secondary';
 
-
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
 
   form!: FormGroup;
   novaTarefa: String = '';
 
-
-  
-  constructor(private fb: FormBuilder, private dialog: MatDialog) { 
+  constructor(private fb: FormBuilder) { 
 
   }
   ngOnInit() {
@@ -45,13 +38,6 @@ export class Exercico1Component implements OnInit, AfterViewInit {
           "false"
       },
     ];
-    this.dataSource = new MatTableDataSource(this.tarefas);
-    console.log(this.tarefas);
-  }
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
   }
 
   adcionarTarefa(){
@@ -60,19 +46,12 @@ export class Exercico1Component implements OnInit, AfterViewInit {
   const add = {
     id: this.tarefas.length + 1,
     descricao: descricao,
-    concluida: false
+    status: "false"
   };
 
-  this.dataSource.data = [...this.tarefas, add];
-  this.tarefas = this.dataSource.data;
+  this.tarefas = [...this.tarefas, add];
 
   this.form.reset();
-}
-
-
-alterarStatus(index: number, checked: boolean) {
-  this.dataSource.data[index].status = checked ? 'true' : 'false';
-  this.dataSource.data = [...this.dataSource.data];
 }
 
 }

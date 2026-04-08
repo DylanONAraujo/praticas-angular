@@ -95,6 +95,12 @@ export class AppComponent {
         label: 'Exercicio 3',
         route: '/exercicio3',
         icon: icLayers
+      },
+      {
+        type: 'link',
+        label: 'Componentização',
+        route: '/componentizacao',
+        icon: icLayers
       }
     ];
   }

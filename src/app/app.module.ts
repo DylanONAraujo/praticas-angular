@@ -26,9 +26,14 @@ import { MatTableModule } from '@angular/material/table';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { Exercicio3Component } from './views/pages/exercicio3/exercicio3.component';
+import { ComponentizacaoComponent } from './views/pages/componentizacao/componentizacao.component';
+import { TableComponent } from './core/lib/components/table/table.component';
+import { CommonModule } from '@angular/common';
+import { LibModule } from './core/lib/lib.module';
+
 
 @NgModule({
-  declarations: [AppComponent, Exercicio2Component, Exercico1Component, Exercicio3Component],
+  declarations: [AppComponent, Exercicio2Component, Exercico1Component, Exercicio3Component, ComponentizacaoComponent, TableComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -50,7 +55,9 @@ import { Exercicio3Component } from './views/pages/exercicio3/exercicio3.compone
     MatTableModule,
     FlexLayoutModule,
     MatCheckboxModule,
-    
+    CommonModule,
+    LibModule,
+
 
     // Vex
     VexModule,
