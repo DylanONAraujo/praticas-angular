@@ -5,6 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { tarefas } from '../../../model/tarefas';
+import { TarefaApiService } from '../../../services/tarefa-api.service';
 
 @Component({
   selector: 'vex-table',
@@ -24,10 +25,15 @@ export class TableComponent implements OnInit {
   novaTarefa: String = '';
 
 
-  constructor(private fb: FormBuilder, private dialog: MatDialog,) { }
+  constructor(private fb: FormBuilder, private dialog: MatDialog, private tarefasApi: TarefaApiService) {
+
+    // for (let i = 0; i < this.displayedColumns.length; i++) {
+    //   let colunas = this.displayedColumns[i];
+    // }
+  }
 
   ngOnInit() {
-  
+
     this.dataSource = new MatTableDataSource(this.tarefas);
   }
 
@@ -37,9 +43,9 @@ export class TableComponent implements OnInit {
   }
 
 
-alterarStatus(index: number, checked: boolean) {
-  this.dataSource.data[index].status = checked ? true : false;
-  this.dataSource.data = [...this.dataSource.data];
-}
+  alterarStatus(index: number, checked: boolean) {
+    this.dataSource.data[index].status = checked ? true : false;
+    this.dataSource.data = [...this.dataSource.data];
+  }
 
 }

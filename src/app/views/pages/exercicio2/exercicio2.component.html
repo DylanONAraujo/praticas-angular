@@ -1,4 +1,4 @@
-<div class="mat-elevation-z8">
+<!-- <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
 
         <ng-container matColumnDef="id">
@@ -27,7 +27,7 @@
 
     </table>
 
-    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Selecione uma paginas:"></mat-paginator>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Selecione uma paginas:"></mat-paginator> -->
 
-<!-- <vex-table [tarefas]="tarefas" [displayedColumns]="displayedColumns">
-</vex-table> -->
+<vex-table  *ngIf="tarefas.length>0" [displayedColumns]="displayedColumns" [tarefas]="tarefas">
+</vex-table>

@@ -29,10 +29,13 @@ import { Exercicio3Component } from './views/pages/exercicio3/exercicio3.compone
 import { ComponentizacaoComponent } from './views/pages/componentizacao/componentizacao.component';
 import { TableComponent } from './core/lib/components/table/table.component';
 import { CommonModule } from '@angular/common';
+import { TabelaDeCarrosComponent } from './core/lib/components/tabela-de-carros/tabela-de-carros.component';
+import { CarrosComponent } from './views/pages/carros/carros.component';
+
 
 
 @NgModule({
-  declarations: [AppComponent, Exercicio2Component, Exercico1Component, Exercicio3Component, ComponentizacaoComponent, TableComponent],
+  declarations: [AppComponent, Exercicio2Component, Exercico1Component, Exercicio3Component, ComponentizacaoComponent, TableComponent, TabelaDeCarrosComponent, CarrosComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

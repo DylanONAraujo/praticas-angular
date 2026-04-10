@@ -101,7 +101,14 @@ export class AppComponent {
         label: 'Componentização',
         route: '/componentizacao',
         icon: icLayers
+      },
+      {
+        type: 'link',
+        label: 'Carros',
+        route: '/carros',
+        icon: icLayers
       }
+
     ];
   }
 }
