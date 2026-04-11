@@ -15,7 +15,7 @@ import { TarefaApiService } from '../../../services/tarefa-api.service';
 export class TableComponent implements OnInit {
   @Input() displayedColumns: string[] = ['id', 'descricao', 'status'];
   dataSource: MatTableDataSource<tarefas> = new MatTableDataSource();
-  @Input() dados: tarefas[] = []; // alterar para receber do backend - Tarefas:
+  @Input() dados: any; // alterar para receber do backend - Tarefas:
 
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

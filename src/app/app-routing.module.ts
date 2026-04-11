@@ -6,6 +6,7 @@ import { Exercicio2Component } from './views/pages/exercicio2/exercicio2.compone
 import { Exercicio3Component } from './views/pages/exercicio3/exercicio3.component';
 import { ComponentizacaoComponent } from './views/pages/componentizacao/componentizacao.component';
 import { CarrosComponent } from './views/pages/carros/carros.component';
+import { ProdutosComponent } from './views/pages/produtos/produtos.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
        { path: 'exercicio3', component: Exercicio3Component},
        { path: 'componentizacao', component: ComponentizacaoComponent},
        { path: 'carros', component: CarrosComponent},
+       { path: 'produtos', component: ProdutosComponent},
     ]
   }
 ];

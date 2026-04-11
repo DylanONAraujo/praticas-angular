@@ -31,11 +31,13 @@ import { TableComponent } from './core/lib/components/table/table.component';
 import { CommonModule } from '@angular/common';
 import { TabelaDeCarrosComponent } from './core/lib/components/tabela-de-carros/tabela-de-carros.component';
 import { CarrosComponent } from './views/pages/carros/carros.component';
+import { ProdutosComponent } from './views/pages/produtos/produtos.component';
+;
 
 
 
 @NgModule({
-  declarations: [AppComponent, Exercicio2Component, Exercico1Component, Exercicio3Component, ComponentizacaoComponent, TableComponent, TabelaDeCarrosComponent, CarrosComponent],
+  declarations: [AppComponent, Exercicio2Component, Exercico1Component, Exercicio3Component, ComponentizacaoComponent, TableComponent, TabelaDeCarrosComponent, CarrosComponent, ProdutosComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

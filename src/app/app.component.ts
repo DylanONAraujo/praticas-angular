@@ -90,24 +90,19 @@ export class AppComponent {
         route: '/exercicio2',
         icon: icLayers
       },
-      {
-        type: 'link',
-        label: 'Exercicio 3',
-        route: '/exercicio3',
-        icon: icLayers
-      },
-      {
-        type: 'link',
-        label: 'Componentização',
-        route: '/componentizacao',
-        icon: icLayers
-      },
+      
       {
         type: 'link',
         label: 'Carros',
         route: '/carros',
         icon: icLayers
-      }
+      },
+      {
+        type: 'link',
+        label: 'Shop',
+        route: '/produtos',
+        icon: icLayers
+      },
 
     ];
   }
