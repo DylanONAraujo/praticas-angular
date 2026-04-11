@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 
 export interface carro {
   nome: string;
@@ -13,8 +14,9 @@ export interface carro {
   styleUrls: ['./tabela-de-carros.component.scss']
 })
 export class TabelaDeCarrosComponent implements OnInit {
-    @Input() displayedColumns: string[] = ['id', 'nome', 'marca', 'preco'];
-    @Input() dataSource: any;
+  @Input() displayedColumns: string[] = ['id', 'nome', 'marca', 'preco'];
+  dataSource: MatTableDataSource<carro> = new MatTableDataSource();
+  @Input() dados: any[] = [];
 
   constructor() { }
 

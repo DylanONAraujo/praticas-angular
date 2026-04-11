@@ -15,7 +15,7 @@ const carros = [
 })
 export class CarrosComponent implements OnInit {
   displayedColumns: string[] = ['id', 'nome', 'marca', 'preco'];
-  dataSource = carros;
+  carros = carros;
 
 
   constructor() { }

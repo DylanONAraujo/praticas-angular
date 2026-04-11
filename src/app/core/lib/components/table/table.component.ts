@@ -14,8 +14,8 @@ import { TarefaApiService } from '../../../services/tarefa-api.service';
 })
 export class TableComponent implements OnInit {
   @Input() displayedColumns: string[] = ['id', 'descricao', 'status'];
-  @Input() dataSource!: MatTableDataSource<tarefas>;
-  @Input() tarefas: tarefas[] = []; // alterar para receber do backend - Tarefas:
+  dataSource: MatTableDataSource<tarefas> = new MatTableDataSource();
+  @Input() dados: tarefas[] = []; // alterar para receber do backend - Tarefas:
 
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -34,7 +34,7 @@ export class TableComponent implements OnInit {
 
   ngOnInit() {
 
-    this.dataSource = new MatTableDataSource(this.tarefas);
+    this.dataSource = new MatTableDataSource(this.dados);
   }
 
   ngAfterViewInit() {

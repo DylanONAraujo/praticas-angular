@@ -2,7 +2,7 @@
 
   <ng-container *ngFor="let coluna of displayedColumns" [matColumnDef]="coluna">
     <th mat-header-cell *matHeaderCellDef>  {{ coluna }} </th>
-    <td mat-cell *matCellDef="let carros">  {{ carros[coluna] }} </td>
+    <td mat-cell *matCellDef="let dado">  {{ dado[coluna] }} </td>
   </ng-container>
 
 
