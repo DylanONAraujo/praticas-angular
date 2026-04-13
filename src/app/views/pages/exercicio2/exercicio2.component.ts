@@ -14,7 +14,6 @@ import { TarefaApiService } from '../../../core/services/tarefa-api.service';
 })
 export class Exercicio2Component implements OnInit {
   displayedColumns: string[] = ['id', 'descricao', 'status'];
-  // dataSource!: MatTableDataSource<tarefas>;
   tarefas: tarefas[] = []; // alterar para receber do backend - Tarefas:
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -32,10 +31,6 @@ export class Exercicio2Component implements OnInit {
         if (response != null) {
           this.tarefas = response
         }
-
-        // this.dataSource = new MatTableDataSource(this.tarefas);
-        // this.dataSource.paginator = this.paginator;
-        // this.dataSource.sort = this.sort;
       },
       error: err => console.error('falha ao buscar tarefas', err)
     });
@@ -44,10 +39,5 @@ export class Exercicio2Component implements OnInit {
   ngOnInit() {
 
   }
-
-  // alterarStatus(index: number, checked: boolean) {
-  //   this.dataSource.data[index].status = checked ? true : false;
-  //   this.dataSource.data = [...this.dataSource.data];
-  // }
 
 }

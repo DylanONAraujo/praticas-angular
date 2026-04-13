@@ -1,0 +1,43 @@
+<!-- <div>
+    <vex-produtos (addToCartEvent)="addToCart($event)"></vex-produtos>
+    <br>
+    <vex-table [displayedColumns]="displayedColumns" [dados]="produto"></vex-table>
+    <br>
+    <div>
+        <h2>Carrinho de compras</h2>
+        <div *ngFor="let product of products">{{product}}</div>
+    </div>
+</div> -->
+
+<div class="pagina">
+
+    <div>
+        <section class="secao-tabela">
+            <vex-table [displayedColumns]="displayedColumns" [dados]="produto">
+            </vex-table>
+        </section>
+    </div>
+    <br>
+    <br>
+    <section class="secao-produtos">
+        <vex-produtos (addToCartEvent)="addToCart($event)"></vex-produtos>
+    </section>
+
+    <section class="carrinho">
+
+        <h2>🛒 Carrinho de compras</h2>
+
+        <div *ngIf="products.length === 0" class="carrinho-vazio">
+            Seu carrinho está vazio
+        </div>
+
+        <div *ngFor="let product of products" class="carrinho-item">
+            <span>{{ product }}</span>
+            <button mat-icon-button (click)="remover(product)">
+                ❌
+            </button>
+        </div>
+
+    </section>
+
+</div>

@@ -1,5 +1,6 @@
 export class carros{
     id?: number;
-    marca!: String;
     nome!: String;
+    marca!: String;
+    preco!: String;
 }

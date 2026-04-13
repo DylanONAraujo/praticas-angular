@@ -19,7 +19,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
-
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
@@ -29,15 +28,18 @@ import { Exercicio3Component } from './views/pages/exercicio3/exercicio3.compone
 import { ComponentizacaoComponent } from './views/pages/componentizacao/componentizacao.component';
 import { TableComponent } from './core/lib/components/table/table.component';
 import { CommonModule } from '@angular/common';
-import { TabelaDeCarrosComponent } from './core/lib/components/tabela-de-carros/tabela-de-carros.component';
 import { CarrosComponent } from './views/pages/carros/carros.component';
-import { ProdutosComponent } from './views/pages/produtos/produtos.component';
+import { TarefasComponent } from './core/lib/components/tarefas/tarefas.component';
+import { EcommerceComponent } from './views/pages/ecommerce/ecommerce.component';
+import { ProdutosComponent } from './core/lib/components/produtos/produtos.component';
+import { MatCardModule } from '@angular/material/card';
+
 ;
 
 
 
 @NgModule({
-  declarations: [AppComponent, Exercicio2Component, Exercico1Component, Exercicio3Component, ComponentizacaoComponent, TableComponent, TabelaDeCarrosComponent, CarrosComponent, ProdutosComponent],
+  declarations: [AppComponent, Exercicio2Component, Exercico1Component, Exercicio3Component, ComponentizacaoComponent, TableComponent, CarrosComponent, ProdutosComponent, TarefasComponent, EcommerceComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -60,6 +62,7 @@ import { ProdutosComponent } from './views/pages/produtos/produtos.component';
     FlexLayoutModule,
     MatCheckboxModule,
     CommonModule,
+    MatCardModule,
 
 
     // Vex

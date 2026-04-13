@@ -1,0 +1,15 @@
+<form [formGroup]='form'>
+  <div fxLayout="row" fxLayoutAlign="center center" class="linha-formulario">
+
+    <mat-form-field appearance="standard">
+      <mat-label>Descrição da tarefa</mat-label>
+      <input matInput formControlName="descricao" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="adicionarTarefa()"
+      [disabled]="form.get('descricao')?.invalid || !form.get('descricao')?.value">
+      Adicionar
+    </button>
+
+  </div>
+</form>

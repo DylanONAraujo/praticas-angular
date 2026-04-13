@@ -1,9 +1,7 @@
-import { Component, NgModule, OnInit, } from '@angular/core';
+import { Component, EventEmitter, NgModule, OnInit, Output, } from '@angular/core';
 import { tarefas } from '../../../core/model/tarefas';
 import { FormBuilder, FormGroup } from '@angular/forms';
-
-
-
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'vex-exercico1',
@@ -13,21 +11,21 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 
 export class Exercico1Component implements OnInit {
   displayedColumns: string[] = ['id', 'descricao', 'status'];
+  dataSource: MatTableDataSource<tarefas> = new MatTableDataSource<tarefas>([]);
   tarefas: tarefas[] = []; // alterar para receber do backend - Tarefas:
   // color: string = 'secondary';
 
-
   form!: FormGroup;
-  novaTarefa: String = '';
 
-  constructor(private fb: FormBuilder) { 
+
+  constructor(private fb: FormBuilder) {
 
   }
   ngOnInit() {
-  
-  this.form = this.fb.group({
-    descricao: ['']
-  });
+
+    this.form = this.fb.group({
+      descricao: ['']
+    });
     this.tarefas = [
       {
         id: 1, descricao: 'Revisar conceitos de componentização',
@@ -38,20 +36,20 @@ export class Exercico1Component implements OnInit {
           false
       },
     ];
+
+    this.dataSource = new MatTableDataSource(this.tarefas);
   }
 
-  adcionarTarefa(){
-  const descricao = this.form.get('descricao')?.value;
+  adicionarTarefa(nova: Partial<tarefas>) {
+    const tarefas = {
+      id: this.tarefas.length + 1, 
+      descricao: nova.descricao!,
+      status: nova.status!
+    };
 
-  const add = {
-    id: this.tarefas.length + 1,
-    descricao: descricao,
-    status: false
-  };
-
-  this.tarefas = [...this.tarefas, add];
-
-  this.form.reset();
-}
+    this.tarefas = [...this.tarefas, tarefas];
+    this.dataSource.data = this.tarefas;
+    // console.log('Recebido no pai:', nova);
+  }
 
 }

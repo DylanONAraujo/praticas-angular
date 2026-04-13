@@ -14,10 +14,10 @@ export class Exercicio3Component implements OnInit {
   }
 
   todosCarros() {
-    this.carrosApi.getCarros().subscribe(carros =>{
+    this.carrosApi.getCarros().subscribe(carros => {
       console.log("Tudo certo!");
       console.log(carros);
-    }, (error)=> {
+    }, (error) => {
       console.log(error);
     });
   }

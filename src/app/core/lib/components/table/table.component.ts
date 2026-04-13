@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
@@ -16,6 +16,7 @@ export class TableComponent implements OnInit {
   @Input() displayedColumns: string[] = ['id', 'descricao', 'status'];
   dataSource: MatTableDataSource<tarefas> = new MatTableDataSource();
   @Input() dados: any; // alterar para receber do backend - Tarefas:
+  @Output() 
 
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -24,17 +25,23 @@ export class TableComponent implements OnInit {
   form!: FormGroup;
   novaTarefa: String = '';
 
+  adicionarTarefa(nova: tarefas) {
+    this.dataSource.data = [...this.dataSource.data, nova];
+  }
+
 
   constructor(private fb: FormBuilder, private dialog: MatDialog, private tarefasApi: TarefaApiService) {
-
-    // for (let i = 0; i < this.displayedColumns.length; i++) {
-    //   let colunas = this.displayedColumns[i];
-    // }
   }
 
   ngOnInit() {
 
     this.dataSource = new MatTableDataSource(this.dados);
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['dados'] && changes['dados'].currentValue) {
+      this.dataSource.data = changes['dados'].currentValue;
+    }
   }
 
   ngAfterViewInit() {

@@ -8,14 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ComponentizacaoComponent implements OnInit {
   @Input() label: string = 'Clique Aqui';
   @Input() color: string = 'primary';
-  
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  alertaClick(){
+  alertaClick() {
     alert(`Você clicou no botão: ${this.color}`);
   }
 

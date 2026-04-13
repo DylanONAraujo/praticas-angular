@@ -99,8 +99,8 @@ export class AppComponent {
       },
       {
         type: 'link',
-        label: 'Shop',
-        route: '/produtos',
+        label: 'Carrinho de Compras',
+        route: '/carrinho',
         icon: icLayers
       },
 

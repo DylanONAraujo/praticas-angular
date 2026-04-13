@@ -1,21 +1,4 @@
+<vex-tarefas (tarefaCriada)="adicionarTarefa($event)"></vex-tarefas>
 
-<form [formGroup]='form'>
-    <div fxLayout="row" fxLayoutAlign="center center" class="linha-formulario">
-        <div class="input-container" fxFlex="50"  fxLayout="row" style="margin-left: 16px;" fxLayoutGab="8px" fxLayoutAlign="start center" fxLayoutGap="8px">
-            <mat-form-field appearance="standard">
-                <mat-label class="button"  >Descrição da tarefa</mat-label>
-                <input matInput formControlName="descricao"/>
-            </mat-form-field>
-            <button mat-button mat-raised-button color="primary" [disabled]="form.get('descricao')?.invalid || !form.get('descricao')?.value">Adicionar</button>
-             <!-- <vex-componentizacao [color]="color"></vex-componentizacao> -->
-        </div>
-        <div class="col">
-        </div>
-    </div>
-</form>
-
-<vex-table 
-  [displayedColumns]="displayedColumns" [dados]="tarefas">
+<vex-table [displayedColumns]="displayedColumns" [dados]="tarefas">
 </vex-table>
-
-<!-- <vex-tabela-carros [displayedColumns]="displayedColumns" [dados] = "tarefas"></vex-tabela-carros> -->
