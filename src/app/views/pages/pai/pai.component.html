@@ -1,0 +1,21 @@
+<table>
+
+    <vex-filho (mensagemEvent)="mensagemRecedida($event)" (usuarioCriadoEvent)="usuarioRecebido($event)" ></vex-filho>
+        <br>
+        <br> 
+    <p>Mensagem do filho: {{ mensagem }}</p>
+    <br>
+    <div>
+        <ul>
+            <li *ngFor="let usuario of user">Usuário do filho: Nome: {{ usuario.nome }} - idade: {{ usuario.idade }}
+                anos - sexo {{ usuario.sexo }} - CPF {{ usuario.cpf }} </li>
+        </ul>
+    </div>
+
+    <br>
+
+    <vex-filho-dois></vex-filho-dois>
+
+</table>
+
+

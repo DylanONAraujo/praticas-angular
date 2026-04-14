@@ -16,7 +16,7 @@ export class TableComponent implements OnInit {
   @Input() displayedColumns: string[] = ['id', 'descricao', 'status'];
   dataSource: MatTableDataSource<tarefas> = new MatTableDataSource();
   @Input() dados: any; // alterar para receber do backend - Tarefas:
-  @Output() 
+
 
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

@@ -5,7 +5,6 @@ const carros = [
   { id: 2, nome: 'Lamborghini Aventador', marca: 'Lamborghini', preco: 'entre R$ 3,5 milhões e R$ 5 milhões+' },
   { id: 3, nome: 'Porsche 911', marca: 'Porsche', preco: 'entre R$ 930 mil e R$ 1,3 milhão+' },
   { id: 4, nome: 'Nissan GT-R', marca: 'Nissan', preco: 'entre R$ 800 mil e R$ 1,5 milhão' },
-
 ];
 
 @Component({
@@ -15,7 +14,7 @@ const carros = [
 })
 export class CarrosComponent implements OnInit {
   displayedColumns: string[] = ['id', 'nome', 'marca', 'preco'];
-  carros = carros;
+  carro = carros;
 
 
   constructor() { }

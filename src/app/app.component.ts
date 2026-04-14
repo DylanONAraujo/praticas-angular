@@ -103,6 +103,12 @@ export class AppComponent {
         route: '/carrinho',
         icon: icLayers
       },
+      {
+        type: 'link',
+        label: 'Output',
+        route: '/pai',
+        icon: icLayers
+      },
 
     ];
   }

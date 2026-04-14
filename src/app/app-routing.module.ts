@@ -4,9 +4,9 @@ import { CustomLayoutComponent } from './custom-layout/custom-layout.component';
 import { Exercico1Component } from './views/pages/exercico1/exercico1.component';
 import { Exercicio2Component } from './views/pages/exercicio2/exercicio2.component';
 import { Exercicio3Component } from './views/pages/exercicio3/exercicio3.component';
-import { ComponentizacaoComponent } from './views/pages/componentizacao/componentizacao.component';
 import { CarrosComponent } from './views/pages/carros/carros.component';
 import { EcommerceComponent } from './views/pages/ecommerce/ecommerce.component';
+import { PaiComponent } from './views/pages/pai/pai.component';
 
 
 
@@ -19,9 +19,10 @@ const routes: Routes = [
        { path: 'exercico1', component: Exercico1Component},
        { path: 'exercicio2', component: Exercicio2Component},
        { path: 'exercicio3', component: Exercicio3Component},
-       { path: 'componentizacao', component: ComponentizacaoComponent},
        { path: 'carros', component: CarrosComponent},
        { path: 'carrinho', component: EcommerceComponent},
+       { path: 'pai', component: PaiComponent},
+    
     ]
   }
 ];
